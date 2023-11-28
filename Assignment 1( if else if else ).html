@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        //Billing System  using if elseif else
+        let Shopping_amount = Number(prompt("Enter the Shopping Amount", 0));
+
+        let Disc = 0
+
+        if (Shopping_amount < 10000) {
+            Disc = 0;
+        }
+        else if (Shopping_amount >= 10000 && Shopping_amount < 20000) {
+            Disc = 10;
+        }
+        else if (Shopping_amount >= 20000 && Shopping_amount < 30000) {
+            Disc = 20;
+        }
+        else if (Shopping_amount >= 30000 && Shopping_amount < 40000) {
+            Disc = 30;
+        }
+        else {
+            Disc = 50;
+        }
+
+        let Disc_amt = Shopping_amount / 100 * Disc;
+
+        let Total_Shopping_Amount_After_Discount = Shopping_amount - Disc_amt;
+
+        document.write(`<h1>Your Shopping Amount is <mark>${Shopping_amount}</mark><h1>`);
+
+        document.write(`<h1>Your Are getting <mark>${Disc}%</mark>Discount And Your Discounted Amount is <mark>${Disc_amt}</mark></h1>`);
+
+        document.write(`<h1>Total Amount you have to pay is <mark>${Total_Shopping_Amount_After_Discount}</mark></h1>`);
+
+    </script>
+</body>
+</html>
