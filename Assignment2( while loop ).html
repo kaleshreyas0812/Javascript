@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        // Printing a tables from 1 t0 15 using table tag and javascript while loop
+
+        document.write(`<table border="1" cellspacing="0" cellpadding="5" width="100%" style=text-align:center;>`)//table tag opening
+        let number1 = 1 // first variable declaration
+        while (number1 <= 10)//condition 1 
+        {
+            document.write(`<tr>`)//opening tr tag 
+            let number2 = 1 // second variable declaration
+            //Using nested while loop
+            while (number2 <= 15)//condition 2 
+            {
+                document.write(`<td><h3>${number1 * number2}</h3></td>`)//output 
+                number2++;//increment in variable 2
+            }
+            number1++;//increment in variable 1
+        }
+        document.write(`</table>`)//closing table tag
+
+    </script>
+</body>
+
+</html>
