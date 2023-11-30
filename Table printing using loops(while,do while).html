@@ -30,6 +30,28 @@
         }
         document.write(`</table>`)//closing table tag
 
+        document.write(`<br><br><hr><hr><br><br>`)
+        // *************************************************************************  
+
+        document.write(`<table border="1" cellspacing="0" cellpadding="5" width="100%" style=text-align:center;>`)//table tag opening
+        let number3 = 1 // first variable declaration
+
+        do{
+            document.write(`<tr>`)//opening tr tag 
+            let number4 = 1 // second variable declaration
+            //Using nested while loop
+            do
+            {
+                document.write(`<td><h3>${number3 * number4}</h3></td>`)//output 
+                number4++;
+            }
+            while(number4 <= 15)
+            number3++;
+        }
+        while (number3 <= 10)//condition 1 
+        
+        document.write(`</table>`)//closing table tag
+
     </script>
 </body>
 
