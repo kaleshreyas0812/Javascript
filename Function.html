@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+
+        // ***********************Different ways to write functions********************************
+
+        // ************************** 1.Normal Function ************************************
+
+        function demo() {
+            document.write(`<h1>Hello <mark>Normal</mark> Function</h1>`)
+        }
+        demo();
+
+        document.write(`<hr>`)
+        // ************************** 2.Variables Expression Function ************************************
+
+        let a = function demo2() {
+            document.write(`<h1>Hello <mark>Variables Expression</mark> Function</h1>`)
+        }
+        a();
+
+        document.write(`<hr>`)
+        // ************************** 3.Fat Arrow/Lambda/Arrow Function  ************************************
+
+        let b = () => {
+            document.write(`<h1>Hello <mark>Fat Arrow/Lambda/Arrow</mark> Function</h1>`)
+        }
+        b();
+
+
+        document.write(`<hr>`)
+
+        //#########################################################################################################
+
+        // ************************** Arguments  ************************************
+
+        function ADD(x = 0, y = 0, z = 0) {
+            document.write(`<h1>Addition of given values=<mark>${x + y + z}</mark></h1>`)
+            document.write(`*******************************************************`)
+            console.log(arguments)
+
+            // ********first way to print arguments*******
+            var sum = 0
+            for (let i = 0; i < arguments.length; i++) {
+                document.write(`<h1>${arguments[i]}</h1>`)
+                sum += arguments[i];
+
+            }
+            document.write(`<h1>Addition of all given arguments=<mark>${sum}</mark></h1>`)
+
+            document.write(`<hr>`)
+            // ********second way to print arguments*******
+
+            var res = 0
+            for (let i of arguments) {
+                document.write(`<h1>${i}</h1>`)
+                res += i;
+            }
+            document.write(`<h1>Addition of all given arguments=<mark>${res}</mark></h1>`)
+
+
+        }
+        ADD(10, 20, 30, 40, 50, 60, 70, 80, 90)
+
+
+        //#########################################################################################################
+
+        // ************************* Rest Parameters *************************************
+        document.write(`<hr>`)
+
+        function multi(x = 1, y = 1, z = 1, ...res) {
+            let multi1 = x * y * z
+            document.write(`<h1>Total Multiplication of given no=<mark>${multi1}</mark></h1>`)
+            console.log(arguments)
+            document.write(`<h1>Ignore Arguments=<mark>${res}</mark></h1>`)
+
+            let add_ignore_values = 0
+            for (let j of res) {
+                console.log(j + " ")
+                add_ignore_values += j
+            }
+
+            document.write(`<h1>Addition of Ignore arguments=<mark>${add_ignore_values}</mark></h1>`)
+
+            let multi2 = multi1 + add_ignore_values
+            document.write(`<h1>Total sum of first three values multiplication and addition of ignore arguments= <mark>${multi2}</mark></h1>`)
+
+
+
+
+        }
+        multi(10, 20, 30, 40, 50, 60, 70, 80)
+
+    </script>
+
+</body>
+
+</html>
