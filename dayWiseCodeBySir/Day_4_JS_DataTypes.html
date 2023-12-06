@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Data Types
+    
+    Primitive DT-  Predefined Data Types
+
+    Non-Primitive - Derived from Primitive Data Types 
+
+
+
+    In JS
+
+    Primitive Data Types- Number,String,Boolean, Symbol,undefined,null,BigInt
+
+    Non-Primitive-  Array, Object
+    -->
+
+    <script>
+
+        let emp_id = 523;
+        //    let emp_id=5.23;
+        console.log(emp_id);
+
+
+        //    typeof- to check data type of initialized value in which variable declartion
+
+        console.log(typeof emp_id);
+
+
+
+        // string-   stored single value-  ' ' or  ""
+
+        var name = "ABC";
+        var name = '123';
+        console.log(name);
+        console.log(typeof name);
+
+
+        //boolean-  true or false
+
+        var a = true;
+        var b = false;
+        console.log(a);
+        console.log(b);
+        console.log(typeof a);
+        console.log(typeof b);
+
+
+
+        //null-  
+        //object in js
+        //as per expert Is a Bug in a JS
+        var user_id = null;
+        console.log(user_id);
+        console.log(typeof user_id);//object
+
+        //empty value
+        var user_data = '';
+        console.log(user_data);
+        console.log(typeof user_data);
+
+
+
+        //undefined
+        //when we just declared variable but not initialized any value
+        //by default value -undefined
+        //data type=undefined
+        var skill;
+        console.log(skill);
+        console.log(typeof skill);
+
+
+        // symbol
+        //JavaScript symbol is a data type of primitive data type. 
+        // The Symbol() function returns the symbol value type.
+        //  The value returned from Symbol() is unique. 
+
+        var fname = "John";
+        var lname = "John";
+
+        console.log(fname == lname);//true
+
+
+        var fname = Symbol("John");
+        var lname = Symbol("John");
+
+        console.log(fname == lname);//false
+
+
+
+
+        // ******************************************************************************
+
+
+
+        // Non-Primitive Data Types
+        
+        // Array -  We can stored similar type or different type of data in An Array
+
+        //Any type of data we can stored-
+
+        //number,string,boolean,undefined,null,object,
+
+        //we can stored mutliple type of data in  a single variable
+
+        //start from 0
+
+
+        //special type of object In JS
+
+        const arr=[10,20,"Pratik",true,null];
+        console.log(arr);
+
+        console.log(typeof arr);//object
+
+
+
+
+        // ************************************8
+
+        // object-  Is a entity having methods and properties
+
+        //holds the large data
+
+        //stored data in a key:value pair
+
+
+        const obj={
+            // key:value,
+            
+            id:123,
+            name:'Vaibhav',
+            skill:'ReactJS',
+            age:true,
+            // tech:[ .......];
+
+
+        }
+
+        console.log(obj);
+        console.log(typeof obj);
+
+
+
+
+    </script>
+
+</body>
+
+</html>

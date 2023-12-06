@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Rest Parameter- Modern JS Concept
+
+        // Handle only Rest values
+        
+        //indicate ...
+        //return pure Array
+
+        //A rest parameter must be last in a parameter list.javascript
+
+
+        function Addition(a,b,c,...res)
+        {
+            console.log(arguments);
+            console.log(res);
+
+            var sum=0;
+            for(let x of res)
+            {
+                console.log(x);
+                sum+=x;
+            }
+
+            return a+b+c+sum;
+        }
+
+        console.log(`Total Sum Is ${Addition(10,20,20,100,200,300,400,500,1000)}`);
+
+
+
+
+    </script>
+    
+</body>
+</html>

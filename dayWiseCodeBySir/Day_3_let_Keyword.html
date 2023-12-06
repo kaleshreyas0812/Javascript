@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- let and const  -ES-6  Modern JS Features
+    
+        To declared js variable
+
+
+        we can declared variable without intialization
+    
+    -->
+
+    <script>
+
+        let a = 20;
+        console.log(a);
+
+
+        // we can declared variable without intialization
+
+        let name;
+        name = "ABC";
+        alert(name);
+
+
+
+        //  we can't redeclared variable with same name 
+        let skill = "HTML";
+        // let skill="ReactJS";
+
+        console.log(skill);//error
+
+
+
+        // we can update default value- 
+
+        let id = 123;
+        id = 345;
+        console.log(id);
+
+
+
+
+        //by default value-  Undefined
+
+        let x;
+        console.log(x);
+
+
+        // *******************************************
+
+        //scope- block scope i.e limited to that scope 
+
+        // var c = 300;
+        // if (c) {
+        //      c = 45;
+        //     console.log(c);//45
+        // }
+        // console.log(c);//45
+
+
+        let c = 300;
+        if (c) {
+            let c = 45;
+            console.log(c);//45
+        }
+
+        console.log(c);//300
+
+
+        // ****************************************************************
+
+
+
+        // var d = 100;
+        // function A() {
+        //     var d = 300;
+        //     console.log(d);//300
+        // }
+
+        // A()
+        // console.log(d);//100
+
+
+        let d = 100;
+        function A() {
+            let d = 300;
+            console.log(d);//300
+        }
+
+        A()
+        console.log(d);//100
+
+
+        // ***************************************
+
+      //let and const keywords Are not  hoisted
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

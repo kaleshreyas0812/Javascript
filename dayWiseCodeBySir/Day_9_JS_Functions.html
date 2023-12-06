@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Functions
+
+    Block of code-bunch of statements
+
+    Write once and reused multiple times by calling that specific function
+    
+
+    Reusable
+
+    we can called same function multiple times by passing different arguments
+
+    -->
+
+
+    <!-- Syntax -->
+
+    <h1 id="data"></h1>
+
+
+    <!-- JS Functions called on events -->
+
+    <button onclick="demo()">CLick Here</button>
+
+    <button onclick="Demo2()">Click Here To Insert Data</button>
+
+    <script>
+
+        // function declartion
+        // function fun_name() {
+        //bunch of js statements
+        // }
+
+        // function call
+        // fun_name();
+
+
+
+        //Mostly we called functions on event
+
+        // ******************************************
+
+        // alert("hello alert");
+
+        function demo() {
+            // block of code
+            alert('Hello Function');
+        }
+
+        // function called
+
+        // demo();
+
+
+        // *********************************************************
+
+        // function Sum() {
+        //     console.log(10 + 30);
+        // }
+        // Sum();
+
+
+        // ****************************************************************
+        // var res = prompt('Add Some Random text');
+        // function Demo2() {
+        //     document.getElementById('data').innerHTML = res;
+        // }
+
+
+        // ******************************************************************************
+        // parameters- pass the values when we declared function defination i.e parameter
+        // arguments- Actual values- When we pass actual values while function calling
+
+
+        // parameters
+
+        function Demo3(a, b) {
+            console.log(a * b);
+        }
+
+        // Actual value- arguments
+        Demo3(10, 10);
+
+        Demo3(20, 10);
+
+
+        // *********************************************************************
+
+        // return keyword
+
+        // it return values outside the function
+        //it executes ouside the function
+
+        // it stops the function execution after return
+
+        // function Demo4(x, y) {
+        //     // console.log(x + y);
+        //     var res=x+y;
+        //     return res;
+
+        // }
+        // var output=Demo4(100,200);
+        // console.log(output);
+
+        // *************************************************************
+
+        function Demo5(x,y,z)
+        {
+            console.log('hello 1')
+            return x+" "+y+" "+z;
+            console.log('hello 2');
+        }
+
+        console.log(Demo5("Akash","Shubham","Shantesh"));
+
+
+        //OP-
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

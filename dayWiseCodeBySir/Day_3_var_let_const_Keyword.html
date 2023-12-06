@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- 3 Keywords to declared js variable -->
+
+    <!-- var
+    
+
+        to declared js variable
+        we can declared variable without intialization
+
+        var a;
+        a=20
+
+        let a;
+        a=20;
+
+        const a=20;
+
+
+        we can redeclared variable with same name 
+
+        var - var a-
+              var a-
+        let
+             let a;
+             let a-  error
+    
+             const -error
+
+        we can update default value- 
+
+        var ,let-  
+
+        const -error-
+
+
+        scope-  Global Scope
+
+        By default value-  undefined
+
+        var a;
+        let a;
+
+
+
+    
+    -->
+
+    <script>
+
+        "use strict";//execute code in strict code
+
+        var name = "Shubham";
+        console.log(name);
+
+
+
+        // we can declared variable without intialization
+
+        var age;
+        age = 25;
+        console.log(age);
+
+
+        // we can redeclared variable with same name 
+
+        var fname = "ABC";
+        var fname = "PQR";
+        alert(fname);
+
+
+        // we can update value
+
+        var skill = "HTML";
+        skill = "ReactJS";
+
+        console.log(skill);
+
+
+
+        //global scope
+
+        var a = 100;
+        if (true) {
+            var a = 300;
+            console.log(a);//300
+        }
+
+        console.log(a);//300
+
+
+
+        //
+        var x = 300;
+        function A() {
+            var x = 500;
+            console.log(x);//500
+        }
+
+        A()//call
+        console.log(x);//300
+
+
+
+        // By default value-  undefined
+
+        var lname;
+        alert(lname);//undefined
+
+
+
+
+        //var keyword  is hoisted
+
+
+
+
+        // *********************************************************8
+        // hoisting
+
+//     we can declared variable before used
+// declared variable after used
+
+
+// a=10;
+// console.log(a);//10
+// var a;
+
+// //var hoisted
+
+
+
+aa=20;
+console.log(aa);
+let aa;
+
+
+
+
+    </script>
+
+</body>
+
+</html>

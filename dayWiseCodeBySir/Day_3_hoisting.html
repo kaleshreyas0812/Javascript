@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- hoisting -->
+
+    <!-- we can declared variable after used
+    we can used variable before declartion -->
+
+    <!-- var keyword is hoisted -->
+    <script>
+
+
+        // console.log(a);//undefined
+        // a = 30;
+        // var a;
+
+        // arr=[]
+        // let arr;
+
+        // console.log(a);
+        // var a = 40;
+
+
+        // a=30;
+        // var a;
+        // console.log(a);//30
+
+
+
+
+        // ****************************************************************
+        //let and const are not hoisted
+        // a = 30;
+        // let a;
+        // const a;
+        // console.log(a);//error - Uncaught ReferenceError: Cannot access 'a' before initialization
+
+
+        // const a = 30;
+        // a = 40;
+        // console.log(a);//Uncaught TypeError: Assignment to constant variable
+
+
+
+        // **************************************************************************************************
+
+        // Hoisting is JavaScript's default behavior of moving declarations to the top.
+
+//         Variables defined with let and const are hoisted to the top of the block, but not initialized.
+
+//             Meaning: The block of code is aware of the variable, but it cannot be used until it has been declared.
+
+// Using a let variable before it is declared will result in a ReferenceError.
+
+// The variable is in a "temporal dead zone" from the start of the block until it is declared:
+
+
+// ***********************************************************
+
+// Declare Your Variables At the Top !
+// Hoisting is (to many developers) an unknown or overlooked behavior of JavaScript.
+
+// If a developer doesn't understand hoisting, programs may contain bugs (errors).
+
+// To avoid bugs, always declare all variables at the beginning of every scope.
+
+// Since this is how JavaScript interprets the code, it is always a good rule.
+
+//usestrict
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

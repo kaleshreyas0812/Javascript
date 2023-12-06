@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- nested callback function
+    
+    
+
+    
+    -->
+
+
+    <script>
+
+        function A() {
+            console.log('Function  A Called');
+
+            function fname() {
+                console.log('fname called');
+            }
+
+            function lname(callback) {
+
+                callback();
+                console.log('Lname Called');
+            }
+
+            lname(fname);
+          
+        }
+
+        function B(callback) {
+            callback();
+            console.log('Function  B Called')
+
+        }
+
+        B(A);
+
+
+        // **********************************************
+
+        // function X()
+        // {
+        //     function Y()
+        //     {
+        //         alert('Hello Function Y');
+        //     }
+        //     Y();
+
+        // }
+        // X();
+
+        // ************************************************
+
+        const X=function demo()
+        {
+
+            const Y=function demo2()
+            {
+                alert('Hello Nested Variable expression Function ');
+   
+            }
+            Y();
+
+   
+        }
+
+        X();
+
+        // *****************************************************
+
+
+        const P=()=>{
+
+            const Q=()=>{
+                alert('Hello Nested Arrow Function ');
+   
+            }
+
+            Q()
+
+        }
+
+        P();
+
+        // ***************************
+        function Sum(a,b){
+            
+            function Addition(x,y)
+            {
+                console.log(x+y);
+            }
+
+            Addition(a,b);
+        }
+
+        Sum(10,20);
+        
+
+
+        
+    </script>
+
+</body>
+
+</html>

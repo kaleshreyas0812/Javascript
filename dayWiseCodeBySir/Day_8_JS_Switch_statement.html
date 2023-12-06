@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Switch- Used to checks multiple conditions ,cases at a same time -->
+    <!-- switch(condition)
+    {
+    case 1:{
+    break;
+    continue;
+    }
+    case 2:{
+
+    }
+
+    default:{
+
+    }
+    } -->
+
+
+    <!-- Week Calender -->
+
+    <script>
+
+        // var day = +prompt('Enter A Day No');
+
+        // switch (day) {
+        //     case 1: alert('Monday');
+        //         break;
+
+        //     case 2: alert('Tuesday');
+        //         break;
+
+        //     case 3: alert('WednesDay');
+        //         break;
+
+        //     case 4: alert('Thursday');
+        //         break;
+
+        //     case 5: alert('Friday');
+        //         break;
+
+        //     case 6: alert('Saturday');
+        //         break;
+
+        //     case 7: alert('Sunday');
+        //         break;
+
+
+        //     default: alert('Sorry Pls Enter A Valid data');
+
+        // }
+
+
+
+        // ***********************************************************************
+
+
+        // switch (day) {
+        //     case 1:
+        //     case 2:
+        //     case 3:
+        //     case 4:
+        //     case 5: alert('Week Day')
+        //         break;
+
+        //     case 6:
+        //     case 7: alert('Weekend');
+        // }
+
+
+        // *******************************************************************************************
+
+        // Build Calculator 
+
+        //Take a 2 No's From user 
+        //Ask User to Perform Given Operation -  +, - ,/, *,  %
+
+        // case '+':
+
+        // *******************************************************************************************
+
+        var no1=+prompt('Enter No 1')
+        var no2=+prompt('Enter No 2')
+
+
+        var data=prompt('Select Operation to Perform " + , - , / , * , %   " ');
+
+        switch(data)
+        {
+            case '+':alert(`${no1} + ${no2} = ${no1+no2}`);
+            break;
+
+            case '-':alert(`${no1} - ${no2} = ${no1-no2}`);
+            break;
+
+            case '*':alert(`${no1} * ${no2} = ${no1*no2}`);
+            break;
+
+            case '/':alert(`${no1} / ${no2} = ${no1/no2}`);
+            break;
+
+            case '%':alert(`${no1} % ${no2} = ${no1%no2}`);
+            break;
+
+            default:alert('Kindly Pls Enter a Valid Data');
+
+            
+
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

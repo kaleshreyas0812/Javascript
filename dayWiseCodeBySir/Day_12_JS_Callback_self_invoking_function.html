@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- self invoking function- no need to call function
+    
+    
+        ()- self invoking
+        
+    -->
+
+    <script>
+
+        (
+            function () {
+                alert('Hello Self Invoking Function');
+            }
+        )();
+
+
+
+
+        // *******************************************************
+
+        // we can pass function as a value
+
+        const Sum = (a, b) => {
+            return a + b;
+        }
+        var res = Sum(100, 150) + 100 + 100;
+        alert(res);
+
+
+        // **************************************************************************
+
+
+        // Synchronous execution-line by line execution of our program
+
+
+        //    OPeration block - wait for exeuction
+
+        // A - B - wait
+
+
+        //Asynchronous execution- doesnt wait for execution i.e callback,async await,promises,setinterval
+
+
+        // Async execution - Not wait for execution  i.e  not blocking any operation
+
+
+
+        // A()-api calling
+
+        // B
+
+
+        // Async
+
+        //         "I will finish later!"
+
+        // Functions running in parallel with other functions are called asynchronous
+
+        // A good example is JavaScript setTimeout()
+
+
+
+        // **************************************************************************
+
+
+        // callback function-  one function execute in a another function
+
+        // i.e  passing a one function to another function as a argument and execute
+
+        // one function execute after onother function completes their execution
+
+
+        // ****************************************************************************************
+
+
+        // function A()
+        // {
+        //     console.log("hello A");
+        // }
+        // function B()
+        // {
+        //     console.log('Hello B');
+        //     A();
+        // }
+        // B();
+
+
+        // function A()
+        // {
+        //     console.log("hello A");
+        //     B()
+        // }
+        // function B()
+        // {
+        //     console.log('Hello B');
+
+        // }
+        // A();
+
+
+        // **********************************************************************
+
+        // Callback function
+
+        // function A()
+        // {
+        //     console.log('Hello Function A');
+        // }
+
+
+
+        // // passing a parameter for above function A
+        // function B(callback)
+        // {
+        //     callback();
+        //     console.log('hello Function B');
+        // }
+        // B(A);
+
+
+        // ******************************************************************
+
+        // function A() {
+        //     console.log('A Function')
+        // }
+
+        // function B(callback, skill) {
+        //     callback();
+        //     console.log(skill);
+
+        // }
+        // B(A, "React");
+
+        // ********************************************************
+
+
+
+        function A(fname) {
+            console.log(fname);
+        }
+
+        function B(callback, lname) {
+            callback("ABC")
+            console.log(lname);
+
+        }
+        B(A, "XYZ");
+
+        // *********************************************************************
+
+        function X(skill) {
+            return "Hello Your Skill =" + skill;
+
+        }
+
+
+        function Y(callback, emp_id) {
+            console.log(callback("MERN Developer"));
+            return emp_id;
+        }
+
+        console.log(Y(X, 12345));
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Logical Operator -->
+    <script>
+
+        // To check 2 or more conditions
+        //   <!-- Logical Opeartor- && || ! -->
+
+
+        // 1 && 1=1
+        // 1 && 0=0
+        // 0 && 1=0
+        // 0 && 0=0
+
+        var a = 10;
+        var b = 20;
+        var c = 30;
+
+        console.log(a < b);//true
+        console.log(a < b && a < c); //true && true =true
+
+        console.log(b > c && c > a && b <= a);//false 
+
+
+
+        // logical OR  ||
+
+        // 1 || 1=1
+        // 1 || 0=1
+        // 0 || 1=1
+        // 0 || 0=0
+
+
+        console.log("*******")
+        console.log(a < b || a < c);//true
+        console.log(a < b || a > c);//true
+
+
+        // !- operator
+
+        console.log(!10 == 10);//false
+
+
+
+        console.log("******")
+        // ********************************************************************************
+
+        // Additional Operator
+
+        // typeof- check the data type of that specific value
+
+        console.log(typeof 1);//number
+        console.log(typeof "1");//string
+
+
+        console.log(typeof undefined);//
+        console.log(typeof typeof undefined);//return string data type
+
+
+        console.log(typeof [10, 20]);//object
+
+
+        console.log("######")
+
+        // ******************************************************************************
+
+        // nullish coalscheing operator
+
+        // return 1st argument if not nullish(null or undefined)
+
+        // ??
+
+
+        var name = "ABC";
+        var emp_id = 1234;
+        console.log(name ?? emp_id);//ABC
+
+
+
+        var x = null;
+        var y = "XYZ";
+
+        console.log(x ?? y);//XYZ
+
+
+        var p;
+        var q = "PQR";
+
+        console.log(p ?? q);//PQR
+
+
+        // ***************************************************************************
+
+        // exponentiation operator- **  - return power of that value
+
+
+        var z = 10;
+
+        console.log(z ** 2);
+        console.log(5 ** 5);//5^5
+        console.log(3 ** 2);//9
+        console.log(3 ** 3);//27
+
+
+        // Math- pow()
+
+
+        // *************************************************************************
+        // ternary opeartor-  alternate to if else conditional statement
+
+        var age = 23;
+        // if(age>=18)
+        // {
+        //     alert("Congrats You Are Eligible");
+        // }
+
+        // else{
+        //     alert("Sorry You Are Not Eligible Come back !!");
+        // }
+
+        // (condition ? if true : if false)
+
+
+        var res = age >= 18 ? "Congrats You are Elgible " : "Sorry You Are Not Elgible"
+        alert(res);
+
+        // *********************************************************************************************
+
+
+        // concatenation operator-  +
+
+        //+ -  Addition , parsing, Concatenation (merging)
+
+
+        var fname = "Pratik";
+        var lname = "Sabale";
+
+        document.write(fname);
+        document.write(lname);
+
+        // concat +
+
+        // document.write('<h1>fname</h1>')
+
+
+        console.log('Hello Your name Is ' + fname);
+
+
+        console.log('Your First name = ' + fname + ' Your Last name Is ' + lname);
+
+
+        document.write('<h1> Hello Your Name Is = ' + fname + '</h1>')
+
+
+        // ***********************************************************************************************
+
+        // Modern JS Solution
+        //ES-6 Features
+        //Used to concat data
+
+        // template literal -  back tick symbol-  ` `
+        //  ` ${} `
+
+        document.write(`Hello Your Name Is ${fname} And Your last Name is ${lname} `)
+
+        document.write(`<h1> First name <mark> ${fname} </mark>  <br>  Hello Your Last Name Is <mark> ${lname} </mark>  </h1>`)
+
+
+        console.log("###########")
+
+        // ******************************************************************************
+
+        // Logical question
+
+        console.log(10 + 20);//30
+        console.log(10 + "20");//1020
+        console.log("5" + "5");//55
+        console.log(5 + "5");//55
+
+
+        console.log(5 * 5);//25
+        console.log(5 * "5");//25
+        console.log(5 / "5");//1
+
+
+        // ***************************************************************
+
+        // NaN-Not a Number
+
+        console.log(10 * "ABC");//NaN
+
+        console.log(100 / 10);//10
+        console.log(100 / "10");//10
+        console.log(100 / "X");//NaN
+
+        // isNaN
+
+        console.log(isNaN(10));//false
+        console.log(isNaN("10"));//false
+
+
+
+    </script>
+</body>
+
+</html>

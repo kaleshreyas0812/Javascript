@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Object -->
+
+    <!-- Object 
+    
+        Is a entity (real time object in which distinguish other object ) having methods and properties
+
+        Large amount of data we can stored i.e Holds the data
+
+        Data stored in a key:value pair
+
+        Named Indexing
+
+        Is a King OF JS i.e  Everything In a JS is a Object
+
+
+        We can stored any type of data- number,string,boolean,array,object,function,null....
+    
+    -->
+
+
+    <script>
+
+        // object
+        // 3 ways to defined object in JS
+
+        // literal way
+        //creating instance of an object
+        //object constructor
+
+
+        //1- literal way
+        const obj = {
+            // key:value,
+
+            id: 1,
+            name: 'ABC',
+            skill: 'AWS',
+            isEligible: true,
+            position: null,
+            vacancy: ["Full Time", "Part Time", "contractual Based",],
+
+        }
+
+        console.log(obj);
+
+
+
+        console.log(obj.isEligible);
+
+
+        // *************************************************************
+
+        //2  creating instance of an object
+
+        //Object- Provides functionality common to all JavaScript objects.
+
+        const obj2 = new Object();
+        obj2.id = 1234;
+        obj2.name = "XYZ";
+        obj2.skill = "AI";
+        obj2.position = "Full Time";
+
+
+
+
+        console.log(obj2);
+
+        // skill
+        console.log(obj2.skill);
+
+
+
+        // *************************************************************************************
+        // *************************************************************************************
+
+
+
+        // this keyword- reference variable  i.e refer to current object
+
+        //global object
+
+
+        console.log(this);
+
+        console.log(window);
+
+        // *************************************************************************************
+
+
+        // object Constructor way
+
+        function User(id, name, skill) {
+
+            // assigned value
+            this.id = id;
+            this.name = name;
+            this.skill = skill;
+        }
+        // now create instance 
+        const data = new User(123, "PQR", 'Cloud Computing');
+
+        console.log(data);
+
+
+
+        // ****************************************************************************************
+
+        // we can defined object as a number,string,boolean,array, 
+        //i.e we need to defined and declared with 'new' keyword
+
+
+        // number as a object;
+
+        let no = 10;
+        console.log(no);
+        console.log(typeof no);//number
+
+        // 
+        let no1 = new Number(100);
+        console.log(no1);
+        console.log(typeof no1);
+
+
+
+        //boolean as  object
+
+        let x = true;
+        console.log(x);
+        console.log(typeof x);//boolean
+
+        let x1 = new Boolean(false);
+        console.log(x1)
+        console.log(typeof x1);
+
+
+
+
+        //string as object
+
+        const str = "ABC";
+        console.log(str);
+        console.log(typeof str);//string
+
+
+        const str1 = new String('ReactJS');
+        console.log(str1)
+        console.log(typeof str1)
+
+
+
+        //Array as a object
+
+        const arr = ["ABC", "XYZ"];
+        console.log(arr);
+        console.log(typeof arr);//object
+
+
+        const arr2 = new Array("ABC", "PQR", 10, true);
+
+        console.log(arr2);
+
+
+        console.log("*********")
+
+        // ******************************************************************************
+        // Array in a object
+
+        const emp = {
+            id: 1,
+            emp_name: 'Vaibhav',
+            emp_position: 'Front end Developer',
+            emp_skill: ["React", "AWS", "NodeJs", "Modern JS"],
+            emp_dob: "23/8/1990",
+
+            // we cant used same key multiple times repetitive but if used it will consider last one
+            emp_dob: "01/01/2000",
+
+
+        }
+
+        console.log(emp);
+
+
+        // we can update the object value
+
+        emp.emp_name = "Sanket";
+        console.log(emp);
+
+        emp.emp_position = "MERN Developer";
+
+        console.log(emp);
+
+
+        // ******************************************************************8
+
+        // Array as a a Object
+
+        // const arr3 = ["ABC", 10, null, { name: 'John', skill: '', }];
+
+
+
+        // *********************************************************************************
+        //Array Object
+
+        // const obj4 = [
+        //     {
+        //         id:1,
+        //         name: '',
+        //         skill: '',
+
+
+        //     },
+
+        //     {
+        //         id:2,
+        //         name: '',
+        //         skill: '',
+
+
+        //     },
+        // ]
+
+
+    </script>
+
+</body>
+
+</html>

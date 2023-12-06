@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Object Properties and methods- Used to perform muliple operations, data manipulations,validations  -->
+
+
+    <script>
+
+
+        const obj = {
+            product_id: 1,
+            product_name: 'Laptop',
+            product_price: 50000,
+            product_brand: 'HP',
+        }
+
+
+        // Object.keys()
+        // Object.getOwnPropertyNames()-  return a key of an given object in an array format
+
+        // Object- Provides functionality common to all JavaScript objects.
+
+
+        console.log(Object.keys(obj));
+        console.log(Object.getOwnPropertyNames(obj));
+
+
+        // Object.values()-return a values of a given object in an Array format
+        // Object.entries()-return a key:value data of given object in  Array
+
+
+        console.log(Object.values(obj));//
+
+
+        console.log(Object.entries(obj));//
+
+        // *********************************************************************
+
+        // Object.is()- return true is both values are same
+
+
+        var res1 = Object.is('10', '10');
+        // alert(res1);
+        console.log(res1);
+
+        console.log(Object.is(NaN, 'NaN'));//false
+        console.log(Object.is(NaN, NaN));//true
+
+
+        console.log("******")
+
+        // isNaN()
+
+
+        // Object makes freeze -  
+
+        // Prevents the modification of existing property attributes and values, 
+        // and prevents the addition of new properties.
+
+        // Object.freeze()
+        // Object.isFrozen()
+
+        // Object.seal()
+        // Object.isSealed()
+
+
+        // Object.isExtensible();
+
+
+
+
+        //1
+        // Object.freeze()- 
+        // Prevents the modification of existing property attributes and values, 
+        // and prevents the addition of new properties.
+
+
+        Object.freeze(obj);
+        console.log(Object.isFrozen(obj));//return true when object is freeze()
+
+        // we cant update
+        obj.product_name = "asdfghj";
+
+        console.log(obj);
+
+        // ***********************************************************************************
+
+        // Prevents the modification of attributes of existing properties, and prevents the addition of new properties.
+
+        Object.seal(obj);
+        console.log(Object.isSealed(obj));
+        // ***********************************************************************************
+
+
+        // isExtensible()
+
+        // Returns a value that indicates whether new properties can be added to an object.
+
+        console.log(Object.isExtensible(obj));//false
+
+
+        // *****************************************************************************
+
+
+        // Object.assign()- copy one object to another object
+
+        const employment_data = {
+            emp_skill: 'ReactJS',
+            emp_role: 'Full Time',
+        }
+
+        const emp_personal_data = {
+            name: 'Peeter',
+            age: 25,
+        }
+
+        console.log(emp_personal_data);
+
+        // Object.assign(target,source)
+        Object.assign(emp_personal_data, employment_data);
+
+        console.log(emp_personal_data);
+
+
+        // *******************************************************************
+
+        // Creates an object that has the specified prototype or that has null prototype.
+        // Object.create()
+
+
+
+        // *********************************************************
+
+        //By default every object has pre defined prototype
+
+        // Object.getPrototypeOf();
+
+        console.log(Object.getPrototypeOf(obj));
+
+        
+
+        // set prototype
+        // Object.setPrototypeOf()
+
+
+
+        // Returns an object containing all own property descriptors of an object
+
+        // Object.getOwnPropertyDescriptor()
+        // Object.getOwnPropertyDescriptors()
+
+
+        console.log(Object.getOwnPropertyDescriptors(obj));
+
+
+        // Returns an array of all symbol properties found directly on object o.
+        // Object.getOwnPropertySymbols()
+
+
+        // console.log(Object.getOwnPropertySymbols(obj));
+
+
+        // ********************************************************************************************
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>

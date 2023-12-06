@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- method - when we pass a function as a key or property value  i.e method-->
+
+
+
+    <script>
+
+
+        const obj = {
+            emp_id: '#123',
+            emp_name: 'ABC',
+            emp_skill: 'Mern Stack',
+            emp_position: 'Front end dev',
+
+            // method
+            User: function () {
+                console.log(`Your name ${this.emp_name} Your Skill is ${this.emp_skill}  And Your Position ${this.emp_position}`)
+            }
+        }
+
+
+        console.log(obj);
+        // console.log(obj.User());
+
+        obj.User();
+    </script>
+</body>
+
+</html>

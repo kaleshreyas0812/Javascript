@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Ways to write Function -->
+
+
+    <!-- Normal Function -->
+    <!-- Variable expression-->
+    <!-- Anonymous Function-->
+    <!-- fat arrow function/arrow function/lamda function-->
+    <!-- callback function -->
+    <!-- self invoking function -->
+
+
+    <!-- nested function -->
+
+
+
+    <script>
+
+
+        // normal function
+
+        function Demo1() {
+            alert('normal function');
+        }
+        Demo1();
+
+
+        // variable expression
+        // function treated like as a any other variable
+
+        var sum = function Demo2(a = 0, b = 0, c = 0) {
+            console.log(a + b + c);
+        }
+        sum(100, 100, 1000)
+
+        // *********************************************************************
+
+
+
+        // Anonymous function-  no name to the function
+        const Mult = function (a, b) {
+            alert(a * b);
+        }
+        Mult(100, 10);
+
+
+        // ***************************************************************************************
+
+        // Modern Way
+
+        // fat Arrow function
+
+        // most
+        //concise way to write function
+        // Easy way and Readable way 
+        //we can write single line code
+        //no need to bind 'this'  i.e access of this keyword
+
+        const A = () => {
+            alert('Hello Fat Arrow Function')
+        }
+        A()
+
+        // ##################################################################################3
+
+
+        const B = (a, b) => {
+            return a * b;
+        }
+        console.log(B(20, 30));
+
+        // ##################################################################################3
+
+        // we can single write single line
+        const Demo2 = () => console.log('Hello dear');
+        Demo2();
+
+        // ##################################################################################3
+
+
+        // when we return something must be in {}
+        const Demo3 = (name) => { return name };
+        console.log(Demo3("ABC"));
+
+        // ##################################################################################3
+
+        //no need to pass () when single parameter
+        const Demo4 = x => console.log(x);
+        Demo4("ReactJS");
+
+        // *******************************************************************
+
+
+
+
+        // Normal function is hoisted
+
+        //called function before declartion/defination
+        X();
+        function X() {
+            console.log('Hello Function A');
+        }
+
+
+
+        // ***************************************************************************
+
+        // Others function are not hoisted i.e must be called function after declartion
+
+        // Y();
+        var Y = () => {
+            console.log('Hello Anonymous function i.e Not Hoisted')
+        }
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

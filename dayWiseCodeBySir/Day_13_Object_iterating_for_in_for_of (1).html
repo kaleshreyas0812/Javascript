@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- for of- 
+        
+        must be iterable
+        
+        only return a value   -->
+
+
+    <!-- for in -return a key value data from a given object or array -->
+
+    <!--  -->
+
+    <script>
+
+
+        const obj = {
+            id: 1,
+            name: 'ABC',
+            address: 'Pune',
+            email: 'abc@gmail.com'
+        }
+
+        // for in-used to iterate object and return key value data
+
+        console.log(obj);
+
+        for (let keys in obj) {
+            // console.log(keys);//return keys only
+            // console.log(obj[keys]);//return value
+
+            console.log(`${keys} =  ${obj[keys]}`);
+        }
+
+
+
+        // ***************************************************************************
+        // Array
+
+        const arr = [10, 20, 30, 40];
+        for (let x in arr) {
+            // console.log(x);//0 1 2
+            // console.log(arr[x]);//10 20,30
+            console.log(`${x} :  ${arr[x]}`);
+        }
+
+
+        // *******************************************************************************
+
+        console.log("********For of ******")
+        // for of- return only values or keys
+
+        // must be iterable
+
+        const arr2 = [10, 20, 30, 40];
+        for (let x of arr) {
+            console.log(x);//return values
+        }
+
+
+
+
+        const obj2 = {
+            name: 'Pratik',
+            email: 'pratik@gmail.com',
+        }
+
+
+        // for of
+        //first we need to convert object into iterable array
+        // object.entries();
+
+        var res2 = Object.entries(obj2);
+        console.log(res2);
+
+
+        for(let x of Object.entries(obj2))
+        {
+            console.log(x);
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

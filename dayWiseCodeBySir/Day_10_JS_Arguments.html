@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Arguments -
+         handle extra values 
+         
+        return complete whole array
+    
+        doesnt not return pure array
+    -->
+
+    <script>
+        // function Mult(a=1,b=1,c=1)
+        // {
+        //     console.log(a*b*c)
+        // }
+
+        // Mult(10,10,10);
+
+
+        function Add(x = 0, y = 0, z = 0) {
+            console.log(x + y + z);
+
+            console.log(arguments);
+
+            //loop 
+            var sum = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                console.log(arguments[i]);
+                sum += arguments[i];
+            }
+
+            console.log('Total Sum is ' + sum);
+
+
+            // **********************************************************
+            // for of -Used to iterate Array object i.e must be iterable
+            //return only values
+            var res = 0;
+            for (let x of arguments) {
+                console.log(x);
+
+                res += x;
+            }
+
+            console.log('Total Sum Is'+res);
+
+        }
+
+        Add(10, 20, 30, 100, 50, 100, 200, 300);
+
+    </script>
+
+
+</body>
+
+</html>

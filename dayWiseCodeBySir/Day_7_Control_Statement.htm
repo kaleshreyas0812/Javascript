@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Control Statments -->
+
+    <!-- Conditional statement
+    
+    
+        Check the conditions
+
+        if
+        if else
+        if elseif else
+
+    
+        switch
+        ternary operator
+
+    -->
+    <!-- looping Statement - Iterate same conditions multiple times i.e looping -->
+
+    <!-- while
+    do while
+
+    for
+     for in
+     for of
+     for each
+     map
+     
+    
+    -->
+
+    <script>
+
+        // if - checks only 1 condition
+        // syntax
+
+        // if (condition) {
+        //     //statements
+        // }
+
+
+        // 
+        // var age = 10;
+        // if (age >= 18) {
+        //     alert('hello Eligible')
+        // }
+        // if (age <= 18) {
+        //     alert('Not Eligible')
+        // }
+
+
+
+        // Given no is even or odd
+        // `${}`
+
+        // var no = 20;
+
+        // **************************************************
+
+        // *******************************************
+
+        // parsing- convert string data to integer
+
+        // parseInt();
+        // +()
+        // Number();
+
+
+        // var number=parseInt(prompt('Enter a No Between 10-100'));
+        // var number=Number(prompt('Enter a No Between 10-100'));
+
+        // var number = +prompt('Enter a No Between 10-100');
+
+        // alert(typeof number);
+
+
+
+        // *******************************************
+        // **************************************************
+
+        // Take input value from User dynamically
+        // prompt()-Dialog box
+
+        // var no=prompt('Enter A No',0);
+
+        // alert(typeof no);//string
+
+        var no = 10;
+        if (no % 2 == 0) {
+            document.write(`${no} Is Even No`);
+        }
+
+
+        if (no % 2 !== 0) {
+            document.write(+no + 'Is a Odd No');
+        }
+
+
+
+        // ***********************************************
+        // shopping cart
+
+        // shop_amt<=5000
+        // disc=0;
+
+        //shop_amt>5000
+        //disc=20%;
+
+
+
+        // let shop_amt = +prompt('Enter A Shopping Amount', 0)
+
+        // var disc = 0;
+        // if (shop_amt <= 5000) {
+        //     disc = 0;
+        // }
+
+        // if (shop_amt > 5000) {
+        //     disc = 20;
+        // }
+
+        // var disc_amt = shop_amt / 100 * disc;
+
+        // document.write(`<h1>Hello Your Shopping Amount Is ${shop_amt} <h1>`)
+        // document.write(`<h2> You Get A ${disc}%  And Your Total Discounted Amount Is ${disc_amt} </h2>`)
+
+
+        // var net_total = shop_amt - disc_amt;
+        // document.write(`<h1>Your Total Shopping Amount Is : <mark>${net_total}</mark></h1>`)
+
+
+        // ***********************************************
+
+        // if else - Checks the 2 conditions
+
+
+        // if(true)
+        // {
+
+        // }
+
+        // else{
+
+        // }
+
+
+
+        // driving license eligibility
+
+        var age1 = Number(prompt('Enter Your Age To Check Driving License Eligibility', 0));
+
+        if (age1 >= 18) {
+            console.log('Congrats');
+        }
+        else {
+            console.log('Sorry')
+        }
+
+
+
+        // even or odd
+
+        var no1 = 13;
+        if (no1 % 2 == 0) {
+            console.log(`${no1} is Even No`)
+        }
+        else {
+            console.log(`${no1} is odd No`);
+        }
+
+
+
+        //
+        var shop = parseInt(prompt('Enter A Shopping Amount', 0))
+        var disc = 0;
+        if (shop >= 5000) {
+            disc = 30;
+
+        }
+
+        else {
+            disc = 0;
+        }
+
+        var disc_amt = shop / 100 * disc;
+
+        document.write(`<h1>Hello Your Shopping Amount Is ${shop} <h1>`)
+        document.write(`<h2> You Get A ${disc}% Discount  And Your Total Discounted Amount Is ${disc_amt} </h2>`)
+
+
+        var net_total = shop - disc_amt;
+        document.write(`<h1>Your Total Shopping Amount Is : <mark>${net_total}</mark></h1>`)
+
+
+
+        
+
+    </script>
+
+</body>
+
+</html>

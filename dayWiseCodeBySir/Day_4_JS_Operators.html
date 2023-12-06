@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Operators-  to perform multiple operations,multiple conditions handle,multiple tasks,mathimatical operations -->
+
+
+    <!-- Types of Opeartors
+    
+
+        Arithmetic operators-
+
+        +,-,/,%,*
+
+
+
+
+        increment/decrement operators-  
+
+        -- ++
+
+
+
+        Assignment opeartor-
+
+        LSV=RSV
+        var a=10
+
+        =,-=,+=,/=,*=,%=, !=
+
+
+        Equality op
+
+        var a=10
+        var b="10"
+
+        a==b//true
+        a===b//false
+        ==,===
+
+
+        comparsion op-   > < >= <= != !==
+
+
+
+
+        logical operator
+
+
+        && , || , ! 
+
+
+
+
+        Bitwise op-  &  ~ (Bitwise not),  |,  ^(bitwise XOR)
+
+
+
+
+        Additional In JS
+
+
+
+        typeof -  check data types
+
+        concatenation operator-  +
+
+        ternary opeartor  -  ? -  alternate to if else
+
+
+
+        Nullish coalscheing operator-  ??    var a=10; var b=20  a??b//10
+        Nullish coalscheing operator-  ??    var a=null; var b=20  a??b//20
+
+        Exponentiation op-  ** - return power 
+    
+    
+    
+    -->
+
+
+    <script>
+
+        //    Arithmetic operators-
+
+        // +,-,/,%(mod),*
+
+
+        var a = 50;
+        var b = 10;
+        console.log(a + b);
+        console.log(a - b);
+        console.log(a / b);
+        console.log(a % b);
+        console.log(a * b);
+
+
+
+        // increment and decrement-  update value by 1
+
+        //post increment -  a++
+        //pre increment -  ++a
+
+
+        // var c=10;
+        // c++;
+        // console.log(c);
+
+
+        var d = 20;
+        ++d;//21
+        ++d;//22
+        d++;//23
+        --d;//22
+        ++d;//23
+        console.log(d); 23
+        console.log("*******************");
+
+
+        var x = 5;
+        x++;
+        console.log(++x);//7
+        x++;//8
+        console.log(x++);//8 9
+        console.log(x);//9
+
+
+        var y = 20;
+        --y;//19
+        y++;//20
+        console.log(y--);//20  y-19
+        ++y;//20
+        console.log(y++);// //20  y-21
+
+
+
+
+        // ******************************************
+        // priority-
+
+
+        // * / % -  similar priority and higher priority than + -
+
+        var a = 10;
+        var b = 5;
+        console.log(a + b + a);//25
+        console.log(a + b * a);//60
+        console.log(a + b / a);//10.5
+        console.log(a + b % a);//15
+        console.log(a + b - a);//5
+
+
+
+
+        console.log(a + b * a)
+        console.log(a * b * a)
+        console.log(a % b * a)
+        // ********************************************
+
+        // Assignment operator
+        // =,-=,+=,*=,/=,%=, !=
+
+        //LSV=RSV
+
+        var x = 20;
+        var y = x;
+        console.log(x)//20
+        console.log(y);//20
+
+
+        var no1 = 20;
+        var no2 = 10;
+        console.log(no1 + no2);//30
+
+        //no1=no1+no2
+        console.log(no1 += no2);//30
+
+        //no1=30
+        //no1=no1-no2;
+        console.log(no1 -= no2);//20
+
+        //20
+        //no1=no1*no2;
+        console.log(no1 *= no2);//200
+
+        //20
+        console.log(no1 /= no2);
+
+        //no1- 20 updated value
+        console.log(no1 += no2 + 50);//80
+
+
+        // !-  return true when conditions becomes false
+        // return false when conditions becomes true
+        console.log(20 != 10);//true
+        console.log(20 != 20);//false
+
+
+
+    </script>
+
+</body>
+
+</html>

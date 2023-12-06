@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- return keyword 
+    
+        its executes the value outside the function
+        i.e return values outside to the function
+
+        Its stops the function Execution after return
+    -->
+
+    <script>
+
+        // function Add(a, b) {
+        //     // console.log(a + b);
+        //     return a + b;
+        // }
+        // var res = Add(200, 300);
+        // alert(res);
+
+
+
+        function Demo(a, b) {
+            console.log("Hello A");
+            return a * b;
+            console.log("Hello B");
+        }
+
+        console.log(Demo(10, 10));//
+
+        // ************************************************************************8
+
+        // Default Parameter- when we not passed sufficient arguments
+
+        //i.e default value pass when we declared function defination
+
+        function Mult(a=1, b=1) {
+            alert(a * b);
+        }
+
+        Mult(5);
+        //error
+        //25
+        //Undefined
+        //NaN-5,undefined =NaN
+
+
+        // ********************************************************************
+
+        function ADD(x=0,y=0,z=0)
+        {
+            return x+y+z;
+        }
+
+        alert(ADD(500,100,400));
+        alert(ADD(500,100));
+        alert(ADD(500));
+        alert(ADD());
+
+        // By default behavior- JS ignored extra values
+        alert(ADD(10,10,30,100));//50
+
+
+        // *****************************************************
+
+        // Arguments
+        // Rest Parameter
+
+
+        // NaN
+        //
+        console.log(10+10)
+        console.log(10+"10")
+        console.log(10+"ABC");//10ABC
+
+        console.log(10*10);
+        console.log(10*"10");//100
+
+        console.log(10*"ABC");//NaN
+
+
+
+    </script>
+
+</body>
+
+</html>
