@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Array - Collection of similar or different type of elements 
+
+        We can stored any type of data
+
+        Starts indexing from 0
+
+
+        Array is a special type of object in a JS
+
+        we can stored multiple type of data in a single variable
+
+
+        Accessed Thorugh Number Indexing
+    
+    
+    -->
+
+    <!-- Ways to create Array
+    
+    //1 Literal Way
+
+    //2 Creating instance of an Array
+
+    
+    -->
+
+    <script>
+
+        // literal way
+        const arr = [10, 20, 'ABC', 'XYZ', true, {}, null, ["HTML"]];
+        console.log(arr);
+
+
+
+        // Creating instance of an Array
+        const arr2 = new Array(10, 20, 30, 'ReacTJS', [10, 20]);
+
+        console.log(arr2);
+        console.log(typeof arr2);
+        // ***************************************************************************************
+
+
+        // Array in a object
+
+        const obj = {
+            id: 1,
+            emp: [{ emp_id: 1, emp_name: 'Shubham', emp_skill: 'ReactJs' }],
+            emp_skills: ['React', 'Angular', 'Java', 'AWS', 'Python', 'AI/ML'],
+
+        }
+
+        //shubham
+
+        console.log(obj.emp[0].emp_name);
+        console.log(obj.emp[0]['emp_name']);
+
+        //python
+
+        console.log(obj.emp_skills[4])
+
+
+
+        // ************************************************************
+
+        // Array object
+
+        const arrdata = [
+            {
+
+            },
+
+            {
+
+            },
+            {
+
+            }
+        ]
+
+
+        // ******************************************************************
+
+
+        // *************************************************************************
+
+
+        const arrdata2 = ["A", "B", "C", ["ABC", "XYZ", "PQR"]];
+
+
+        // *************************************************************************
+
+        // Iterating array 
+
+        const user1 = ["Pratik", "MERN", 9876543210, 'pratik@gmail.com'];
+
+
+        console.log(user1.length);
+        // for 
+
+        for (let i = 0; i < user1.length; i++) {
+            console.log(user1[i]);
+        }
+
+
+        console.log("*****")
+
+        //for of-return only values
+        for (let x of user1) {
+            console.log(x);
+        }
+
+
+        //for in-return a key value data
+        for (let keys in user1) {
+            console.log(keys + " =  " + user1[keys]);
+        }
+
+        // *******************************************************************************
+
+
+
+        // Create an Empty array and push value dynamically from 1-30
+
+        // const no=new Array()
+        const no = [];
+
+
+
+        // for (let i = 0; i < 30; i++) {
+        //     no[i] = i + 1;
+        // }
+
+        console.log(no);
+
+        var x = 0; //1
+        for (let i = 1; i <= 30; i++) {
+
+            no[x] = i;//2
+            x++
+
+        }
+
+        console.log(no);
+
+
+
+        // ************************************************************************************
+        
+
+    </script>
+
+
+</body>
+
+</html>
