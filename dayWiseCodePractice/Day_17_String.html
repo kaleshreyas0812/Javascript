@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // String =
+        // string is a collection of character
+        // we can store single value in a variable i.e string data 
+        //string is written in double quotes("") or single quotes('')
+        //start index from 0
+        //string has number indexing
+
+        // **********************************************************
+
+        //method 1 :Normal Method
+        let str = "ReactJs";
+        console.log(str);//ReactJs
+        console.log(typeof str);//string
+
+        // **********************************************************
+
+
+        //creating instances of string using new keyword
+        let str1 = new String("ModernJs");
+        console.log(str1);
+        console.log(typeof str1);//object
+
+
+        // **********************************************************
+
+
+
+        //length
+        let str2 = "abcdefgh";
+        console.log(str2.length);//8
+
+        // **********************************************************
+
+
+
+        //slice-extract part of a string
+        //syntax(start,end(ignore last index))
+        // doesn't modified original string
+
+        const str3 = "abcdefgh";
+        console.log(str3.slice(0, 5));//abcde
+        // console.log(str3);
+
+        const str4 = "abcdefgh";
+        console.log(str4.slice(0));//abcdefgh
+
+        // -ve index is allowed in slice method
+        console.log(str4.slice(-5, -2));//def
+
+        // **********************************************************
+
+        //substring is similar to slice method
+        //substring(start,end(ignore last index))
+
+        console.log(str4.substring(1, 3));//bc
+
+        // -ve index not allowed in substring method
+        console.log(str4.substring(-5, -2));//no output gives empty space
+
+        // **********************************************************
+
+
+        // splice not works on string 
+        // substr(start,length)
+        //extract part of a string
+
+        const str5 = "abcdefgh";
+        console.log(str5.substr(0, 5));//abcde
+
+        // console.log(str5);
+        console.log(str5.substr(0));//abcdefgh
+        console.log(str5.substr(0, str5.length));//abcdefgh
+
+        // **********************************************************
+
+        // toUpperCase()- is used capitalize given string  
+
+        let str6 = "hello shreyas!";
+        console.log(str6.toUpperCase());//HELLO SHREYAS!
+
+
+        //toLowerCase() - is used uncapitalized given string
+        let str7 = "HELLO SHREYAS!"
+        console.log(str7.toLowerCase());//hello shreyas!
+
+        // **********************************************************
+
+        let str8 = "Hello Welcome to Frontend Development Team";
+
+        // indexof() - return index of an specific character from given data
+        console.log(str8.indexOf('W'));//6
+
+        // lastIndexof() - return index of an last occurrence character from given data 
+        console.log(str8.lastIndexOf('l'))//30
+
+        //charAt - return a character of that specific index
+        console.log(str8.charAt('10'));//o
+
+        //charCodeAt() - return a unicode or ASCII value of that character
+        // Returns the Unicode value of the character at the specified location.
+        //ASCII value: A-Z=65-90 , a-z=97-122
+        console.log(str8.charCodeAt(10))//111
+
+        // **********************************************************
+
+        let str9 = "  Hello World  ";
+
+        //trimStart() - remove empty space at the start of string and return a new string 
+        console.log(str9.trimStart());//Hello World  
+
+        //trimEnd() - remove empty space at the end of string and return a new string
+        console.log(str9.trimEnd());//  Hello World
+
+        //trim() - remove empty space from start and end of string and return a new string
+        console.log(str9.trim());//Hello World
+
+
+        // **********************************************************
+
+        let str10 ="Hello Developer";
+        // split() -helps to convert string into array
+        console.log(str10.split());
+
+        // **********************************************************
+
+        
+
+
+
+
+
+    </script>
+</body>
+
+</html>

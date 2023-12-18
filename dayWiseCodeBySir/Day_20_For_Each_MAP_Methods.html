@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- For Each
+    
+        Used to traversing an Array
+        Iterating an Array elements
+
+        
+A function that accepts up to three arguments. 
+forEach calls the callbackfn function one time for each element in the array.
+
+
+        Doesn't return a new Array
+
+        return 'undefined'
+
+
+        we cant used Array methods like sort(),reduce(),filter()
+        The forEach() method doesn’t return anything hence the method chaining technique cannot be applied here
+
+        **********************************************************************************
+
+
+        MAP-Iterating An Array and Return a new array
+    
+
+        A function that accepts up to three arguments.
+        The map method calls the callbackfn function one time for each element in the array.
+        With the map() method, we can chain other methods like, reduce(),sort() etc.
+    -->
+
+
+    <script>
+
+        const arr = [100, "ABC", "XYZ", true];
+
+        const obj = [
+
+            {
+                id: 1,
+                emp_name: "ABC",
+                emp_role: 'MERN',
+            },
+
+            {
+                id: 2,
+                emp_name: "XYZ",
+                emp_role: 'React',
+            }
+
+        ]
+
+        // arr.forEach(function(){})
+        arr.forEach((val, index, arr) => {
+            console.log(val);
+        })
+
+
+        // obj.forEach((val)=>{
+        //     console.log(val);
+        // })
+
+
+        // *************************************************************************
+
+        console.log("*******")
+        arr.map((val) => {
+
+            console.log(val);
+        })
+
+
+
+        // ***************************************************************
+
+        const user = [
+
+            {
+                id: 1,
+                emp_name: 'A',
+                emp_role: 'Front end'
+            },
+            {
+                id: 2,
+                emp_name: 'B',
+                emp_role: 'Front end'
+            },
+            {
+                id: 3,
+                emp_name: 'C',
+                emp_role: 'Front end'
+            },
+            {
+                id: 4,
+                emp_name: 'D',
+                emp_role: 'Front end'
+            }
+
+        ]
+
+
+
+        user.map((val) => {
+            console.log(val);
+            console.table(val);
+        })
+    </script>
+
+
+</body>
+
+</html>

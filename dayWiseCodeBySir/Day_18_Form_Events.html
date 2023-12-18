@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        label {
+            font-weight: bold;
+            margin-right: 20px;
+        }
+
+        input,
+        select {
+            padding: 10px 40px;
+            font-weight: bold;
+            margin: 10px 0px;
+
+        }
+
+        .btn1 {
+            padding: 10px 40px;
+            font-weight: bold;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+
+        p::selection {
+            background-color: orangered;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Form Events
+    
+    
+        onfocus- when we focus on input field
+        onblur- when we lost focus from input field
+
+        onchange-when we change or select options data
+
+        onselect- when we select any content or data
+
+        onsubmit- when we submit our form
+
+
+    
+    -->
+    <center>
+        <label for="">Enter Your Email</label>
+        <!-- <input type="email" name="useremail" placeholder="john@gmail.com" id="useremail" onfocus="demo1()"
+            onblur="demo2()" onfocus="demo3('userpass')"><br><br> -->
+
+        <input type="email" name="useremail" placeholder="john@gmail.com" id="useremail"
+            onfocus="demo3('userpass')" /><br><br>
+
+
+        <label for="">Enter your password:</label>
+        <input type="password" name="userpass" placeholder="enter your password" id="userpass"
+            onfocus="demo3('useremail')" /><br><br>
+
+
+
+        <!-- onchange -->
+        <label for="">Choose your Skills</label>
+        <!-- <select name="" id="userskill" onchange="demo4()"> -->
+        <select name="" id="userskill" onchange="alert(userskill.value)">
+
+            <option value="FrontEnd Technology">FrontEnd Technology</option>
+            <option value="Back Technology">BackEnd Technology</option>
+
+            <optgroup label="Additionals">
+                <option value="AWS">AWS</option>
+                <option value="AI/ML">AI/ML</option>
+            </optgroup>
+        </select><br><br>
+
+        <button class="btn1">Save Form</button>
+
+
+        <br>
+        <br>
+        <hr>
+
+
+
+
+        <label for="">Text</label>
+        <input type="text" name="" id="data" onselect="demo5()">
+        <br><br>
+
+        <hr>
+
+
+        <!-- <form action="" onsubmit="alert('Hello Successfully Submiited Form')"> -->
+        <form action="" onsubmit="return confirm('Are You Sure ?')">
+        <!-- <form action="" onsubmit="demo6()"> -->
+
+            <label for="">Enter your Name</label>
+            <input type="text" name="" id="">
+
+
+
+            <br><br>
+
+
+
+            <input type="submit" name="" id="">
+            <button type="submit">Submit Type Button</button>
+            <button>Save Form Button</button>
+
+            <button type="button">Normal Button</button>
+        </form>
+    </center>
+
+    <script>
+
+
+        // const demo1 = () => {
+
+        //     document.getElementById("useremail").style.backgroundColor = "orange";
+        // }
+
+
+        // function demo2() {
+        // useremail.style.backgroundColor = "pink";
+
+        // 
+
+        // ******************************************************************************
+
+
+        function demo3(data) {
+            document.getElementById(data).style.backgroundColor = "navy";
+        }
+
+
+        // ******************************************************************************
+        // onchange
+
+        const demo4 = () => {
+            var res = document.getElementById('userskill').value;
+            alert('You Skill : ' + res)
+
+        }
+
+
+        // ******************************************************************************
+
+
+
+        function demo5() {
+            var res = document.getElementById('data').value;
+            alert('You Selected ' + res);
+        }
+    </script>
+</body>
+
+</html>

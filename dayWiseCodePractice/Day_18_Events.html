@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button{
+            height: 60px;
+            width: 150px;
+            margin-right: 20px;
+            font-size: 18px;
+            border: none;
+            background-color:purple;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- 
+        **Events in a JS**
+
+    -Do Something on users action or user activity
+    -performing operations on users actions i.e Events
+    
+    -Types of Events
+    1.Mouse Events=onclick,ondblclick,onContextMenu,onmouseover/onmouseleave,onmouseenter/onmouseout,onmouseup/onmousedown,onmousewheel
+    2.Keyboards events =onkeypress,onkeyup,onkeydown
+    3.Window Events= onscroll,onload,onresize
+    4.Form events = onfocus,onblur,onchange,onselect,onsubmit
+    -->
+
+    <!-- *** Mouse Events *** -->
+
+    <!-- onclick - when we click using mouse i.e single click using mouse -->
+
+    <button onclick="onClickFunction()">onclick Event</button>
+
+    <!-- ondblclick -when we double click using mouse i.e double click using mouse -->
+
+    <button ondblclick="ondblClickFunction()">ondblClick Event</button>
+
+    <script>
+        
+        let onClickFunction=()=>{
+            document.write(`<h1 style=color:red> This is <mark> onClick Event </mark></h1>`)
+        }
+
+        function ondblClickFunction(){
+            document.write(`<h1 style=color:red> This is <mark> ondblClick Event </mark></h1>`)
+        }
+    </script>
+
+
+
+</body>
+
+</html>

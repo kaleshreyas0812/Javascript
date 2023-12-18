@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box_1{
+            height:450px;
+            width:500px;
+            background-color: black;
+            /* margin:100px 30%; */
+
+            margin: 50px auto;
+        }
+
+
+        .box_2{
+            height:450px;
+            width:500px;
+            background-color: brown;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body onmousewheel="Demo9()" id="body">
+
+    <!-- Events in a JS-
+    Do Something on Users Action or Users Activity
+
+
+    Performing operations on users actions i.e Events
+
+
+
+    Types of Events
+
+
+    Mouse Events- onclick, ondblclick,onContextMenu, onmouseover/onmouseleave, onmouseenter/onmouseout, onmouseup/onmousedown  onmousemove..onmousewheel
+    keyboard events- onkeypress,onkeyup,onkeydown
+
+    Window events- onscroll,onload,onresize
+    Form Events- onfocus,onblur,onchange,onselect,onsubmit
+
+
+
+
+
+
+-->
+
+    <!-- Mouse events
+    
+    onclick- when we click
+    ondblclick- when click double
+
+    oncontextmenu- when right click on mouse btn
+
+    onmouseover- when we hovering mouse on specific element
+    onmouseleave- when we leave specific element
+
+
+    onmousenter- when we enter on specific element
+    onmouseout- when we out from specific element
+
+
+    onmouseup-when we relases mouse button
+    onmousedown-when we pressed mouse button
+
+
+    onmousemove-  when mouse movement take place
+
+    -->
+
+    <button onclick="alert('Hello OnClick Event')">CLick here</button>
+    <button ondblclick="Demo1()" oncontextmenu="alert('oncontextmenu Event called')">Dbl Click here</button>
+
+
+    <hr>
+    <div class="box_1" id="divbox" onmouseover="Demo2()" onmouseleave="Demo3()"  onmouseenter="Demo4()"  onmouseout="Demo5()"></div>
+
+    
+
+    <div class="box_2" id="box_2"  onmousedown="Demo6()"  onmouseup="Demo7()" onmousemove="alert('hello onmouseove')"></div>
+
+
+    <script>
+
+        const Demo1=()=>{
+            alert('Hello Double click Event');
+            document.getElementById('divbox').style.backgroundColor="orange";
+        }
+
+
+
+
+        // onmouseover()
+
+        // function Demo2()
+        // {
+        //     document.getElementById('divbox').style.backgroundColor="navy";
+        //     // document.getElementById('divbox').style.backgroundImage="linear-gradient(orange,white,green)";
+        // }
+
+
+        //onmouseleave
+        // const Demo3=function A()
+        // {
+        //     document.getElementById('divbox').style.backgroundColor="magenta";
+        // }
+
+        //onmouseenter
+        function Demo4()
+        {
+            document.getElementById('divbox').style.backgroundColor="purple";
+        }
+
+
+
+        //onmouseout
+
+        function Demo5()
+        {
+            document.getElementById('divbox').style.backgroundColor="black";
+        }
+
+
+
+        //onmousedown
+
+        let Demo6=()=>{
+            document.getElementById('box_2').style.borderRadius="50%";
+        }
+
+
+
+        // onmouseup
+
+        //
+        const Demo7=function()
+        {
+            document.getElementById('box_2').style.borderRadius="0%";
+            document.getElementById('box_2').style.backgroundColor="maroon";
+        }
+
+
+
+        // ***********************************************
+
+        const Demo9=()=>{
+            document.getElementById('body').style.background="aqua"
+        }
+
+    </script>
+
+
+</body>
+
+</html>

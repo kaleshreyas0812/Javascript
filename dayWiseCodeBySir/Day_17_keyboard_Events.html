@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* .box_1{
+            height:80vh;
+            width:50%;
+            background-color: rgb(67, 35, 24);
+            margin: auto;
+        } */
+    </style>
+</head>
+
+<body onkeypress="Demo1()" id="container" onkeyup="Demo2()" onkeydown="Demo3()">
+
+    <!-- Keyboard Events- Work on keyboards
+    
+    onkeypress- when we press the keyboard key
+
+    onkeyup-when we relased our pressed button
+
+    onkeydown-when we pressed down keys i.e arrow keys,alt,ctrl
+
+    oninput- 
+
+
+    -->
+
+
+    <hr>
+
+    <label for="">Enter Your Name: </label>
+    <input type="text" name="" id="userdata" placeholder="Enter your Name" oninput="Demo4()">
+
+
+    <hr>
+    <h1 id="data">Pratik....................................</h1>
+    <script>
+
+        //onkeypress
+        const Demo1 = () => {
+
+            document.getElementById('container').style.backgroundColor = "black";
+        }
+
+
+
+        //onkeyup
+        const Demo2 = () => {
+            container.style.backgroundColor = "pink";
+        }
+
+
+
+        //onkeydown
+
+        function Demo3() {
+            document.getElementById('container').style.backgroundColor = "yellow";
+
+        }
+
+
+
+        // *******************************************************
+
+
+        const Demo4 = () => {
+            var res = document.getElementById('userdata').value;
+            var res2 = document.getElementById('data');
+            res2.innerHTML = res;
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- String- Is a collection of character -->
+    <!-- we can stored  a single value in a variable i.e string data -->
+    <!-- "" or '' -->
+
+
+    <!-- starts indexing from 0 -->
+
+    <script>
+
+        var str = "ReactJS";
+        console.log(str);//string
+
+
+
+        // creating instance of a string using new keyword
+        var str2 = new String("Modern JS")
+        console.log(str2);
+        console.log(typeof str2);//object
+
+
+
+        // ****************************************************************************************
+
+
+        // length
+
+        const str3 = "asdfghjkl";
+        console.log(str3.length);
+
+
+        // slice-  extract part of a string
+        // syntax(start,end(ignored last index))
+
+        //doesnt modified original string
+
+        //substring
+
+        const str4 = "abcde";
+        console.log(str4.slice(0, 4));//abcd
+
+        console.log(str4.slice(0));
+        console.log(str4);
+
+        console.log(str4.slice(-3, -2));//c
+
+        // **********************************
+        // similar to slice
+        // substring(start,end(ignored last index));
+
+        console.log(str4.substring(0, 4));//abcd
+
+        // -ve index not allowed
+        console.log(str4.substring(-3, -2));
+
+
+        // ******************************************************************************
+
+        // splice not works one string
+        // substr()
+
+        //extract part of a string
+
+        const str5 = "React"
+        // console.log(str5.substr(start,length))
+
+        console.log(str5.substr(0, 3));//Rea
+        console.log(str5);
+
+
+        console.log(str5.substr(0));//React
+        console.log(str5.substr(0, str5.length));//React
+
+
+
+        // *********************************************************************8
+
+        // toUpperCase()
+        // toLowerCase()
+
+
+        const str6 = "Frontenddevelopment";
+
+        var res1 = str6.toLowerCase();
+        alert(res1);
+
+        alert(str6.toUpperCase());
+
+        // *****************************************************************
+
+        // indexOf()-return index of an specific character
+        // lastIndexOf()-return index of an last occurence of a specific character
+
+
+
+        //charAt-  return a character of that specific index
+
+        //ASCII value - A-65  Z-90  a-97 z-122
+
+        //charCodeAt()-  return unicode or ASCII value of that speific character
+
+
+
+
+        const str7 = "AWS Solution Architect";
+
+        console.log(str7.indexOf('S'));//2
+        console.log(str7.lastIndexOf('S'));//4
+
+        console.log(str7.charAt(4));//S
+
+        console.log(str7.charAt(0));//A
+
+
+        // Returns the Unicode value of the character at the specified location.
+        console.log(str7.charCodeAt(0));//65
+
+
+        // ***********************************************************
+
+        // To Remove emoty space from string
+        //return a new string and not modified original string
+        //trimStart()-
+        //trimEnd()
+        //trim()
+
+
+        const name = "  Yash  ";
+
+        console.log("******")
+        console.log(name);
+        console.log(name.length);//8
+
+
+        // *************************
+        var a1 = name.trimStart();
+        console.log(a1)
+        console.log(a1.length);
+
+        // *****************************
+
+        var a2 = name.trimEnd();
+        console.log(a2);//
+        console.log(a2.length);//6
+        // *****************************
+
+
+        var a3 = name.trim();
+
+        console.log(a3);
+        console.log(a3.length);//4
+        // *****************************
+
+
+        // Convert string to Array
+        const str8 = "MERN Stack";
+
+        // split();
+
+        console.log(str8.split());
+
+        console.log(str8);
+
+
+        // ***********************************************************************
+
+
+        // concat()-  Used to merge two or more string
+        // replace(sv,rv)- replace a new string with a original one
+        //includes()-return a boolean value i.e check exists or not
+
+
+        const str9 = "ABC";
+        const str10 = "XYZ";
+
+        console.log(str9 + " " + str10);
+
+        console.log(`${str9} ${str10}`)
+
+        // concat
+
+        console.log(str10.concat(str9));//XYZ ABC
+
+
+        // ************************************************************
+
+        // replace()-  replace a original string data to new one
+
+
+        // replace(search val,replace val)
+
+        console.log("******");
+
+        const str11 = "HTML CSS  JS  JS";
+
+        console.log(str11);
+
+        //return a new string
+        console.log(str11.replace('JS', 'ReactJS'));
+        console.log(str11.replace('XYZ', 'ReactJS'));
+        console.log(str11);
+
+
+        // ****************************************************
+
+        // includes()
+
+        console.log(str11.includes("HTML"));//true
+        console.log(str11.includes("HTML1"));//false
+
+        // ***********************************************************************
+
+        // padStart()
+        // padEnd()
+
+        //
+        //Pads the current string with a given string (possibly repeated) so that the resulting string reaches a given length.
+        // The padding is applied from the start (left) of the current string.
+
+        const a = "AB";
+        // console.log(a.padStart(maxlength,string))
+
+        console.log(a.padStart(5, "0"));
+        console.log(a.padStart(10, "#"));
+
+        console.log(a.padEnd(15, "1"))
+
+
+
+
+
+        // ***************************************************************
+
+        //Immutable
+
+        const str12 = "XYZ";
+
+
+        console.log(str12);
+
+        str12[0] = "A";
+        console.log(str12);
+        console.log(str12[0]);
+
+
+    </script>
+
+</body>
+
+</html>

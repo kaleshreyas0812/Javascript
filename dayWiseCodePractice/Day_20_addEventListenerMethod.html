@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            background-color: peru;
+            border: 0;
+            height: 50px;
+            padding: 10px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- addEventListener method - Used to attached a event handler to the html content-->
+
+    <button id="btn1">addEventListener</button>
+
+    <button onclick="removeEvent()">removeAddedEvent</button>
+
+    <script>
+
+        // first way 
+
+        // const addEvent=()=>{
+        // alert('Hello addEventListener Method');
+        // }
+
+        // var res=document.getElementById('btn1');
+        // res.addEventListener('click',addEvent);
+
+        //Second way
+        var res=document.getElementById('btn1').addEventListener('click',addEvent=()=>{
+            alert('Hello addEventListener Method')
+        });
+
+
+        const removeEvent=()=>{
+            alert('Hello Event is removed successfully');
+            document.getElementById('btn1').removeEventListener('click',addEvent);
+        }
+    </script>
+
+</body>
+
+</html>

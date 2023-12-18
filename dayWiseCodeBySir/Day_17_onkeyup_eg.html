@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <center>
+        <label for="">Enter Your Email Id: </label>
+
+        <input type="email" name="usermail" id="usermail" placeholder="enter your email" onkeyup="getData()">
+
+
+        <h1 id="data"> </h1>
+
+    </center>
+
+
+
+
+    <script>
+
+        function getData() {
+            // alert();
+
+            var res = document.getElementById('usermail').value;
+
+            // alert(res);
+            document.getElementById('data').innerHTML = res;
+
+        }
+
+        
+    </script>
+
+
+
+<!-- ******************************************************************************************************** -->
+
+
+<!-- Assignments on Events -->
+
+<!-- Take A Div box-h,w,bg
+
+2 buttons-  hide show
+
+1 button Toggle-hideshow -->
+
+
+
+<!-- ******************************************************************************************************** -->
+</body>
+
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- BOM Object -->
+
+
+
+    <button onclick="history.back()">Go Back</button>
+    <button onclick="history.forward()">Go Forward</button>
+    <button onclick="history.go(-2)">Directly Go</button>
+
+
+    <!-- Additional -->
+
+    <!-- print() -->
+
+    <button onclick="window.print()">Print Document</button>
+
+    <button onclick="openWin()">Click Here To Open New window</button>
+    <button onclick="closeWin()">Click Here To Open Blank window</button>
+
+    <!--  -->
+
+
+
+    <script>
+
+        var data = window;
+        console.log(data);
+        console.log(this);
+
+        // ***********************************************************************************************
+
+        // Dialog boxes
+
+        // alert()-show popup box on window screen 
+        //return undefined
+
+
+        // prompt()- when we take input from user
+
+        // ok -return data
+        // cancel - null
+
+
+
+        // confirm()=ask for confirmation
+        //return boolean value
+
+        // ok-return true
+        // cancel-return false
+
+        // *************************************************************
+        // var res1 = alert('Hello ALert');
+        // console.log(res1);//undefined
+
+
+        // *****************************************************************
+
+        // var res2 = prompt('Enter Data', 'abc');
+        // console.log(res2);
+
+        // ***********************************************************
+
+        // confirm()
+
+        // var res3 =confirm('Are You Sure ?');
+        // var res3 =window.confirm('Are You Sure ?');
+        // console.log(res3);
+
+
+        // **********************************************************
+
+        console.log("**********")
+
+        // history property
+
+        var his = window.history;
+        console.log(his);
+
+
+        // 3 Methods of history
+
+
+        // back()
+        // forward()
+        // go(-2)
+        // go(2)
+
+
+        // **********************************************************************
+        // location
+
+        var loc=location;
+        console.log(loc);
+
+    console.log(loc.port)
+    console.log(loc.hostname)
+    console.log(loc.protocol)
+
+//         hash
+//         host
+// hostname
+// href
+// origin
+// pathname
+// port
+// protocol
+
+
+
+// ********************************************************************************************
+
+var navi=window.navigator;
+console.log(navi);
+
+console.log(navi.cookieEnabled);//true
+console.log(navi.appCodeName)
+console.log(navi.appName)
+console.log(navi.appVersion)
+
+        // ***********************************************************************************
+
+
+        var scr=window.screen;
+
+        console.log(scr);
+
+//         availHeight
+// availLeft
+// availTop
+// availWidth
+// colorDepth
+// height
+
+
+console.log(scr.availHeight);
+console.log(scr.height)
+console.log('Color Depth Is : '+scr.colorDepth)
+console.log('Pixel Depth Is : '+scr.pixelDepth)
+
+
+// ******************************************************************
+
+// return height and window of a window
+
+console.log("******************************")
+console.log(window.innerHeight)
+console.log(window.outerHeight)
+console.log(window.innerWidth)
+console.log(window.outerWidth)
+
+        // ***********************************************************************************
+        // ***********************************************************************************
+
+
+var res;
+const openWin=()=>{
+    res=window.open('https://www.amazon.in',height="350px" ,width="400px")
+}
+
+
+const closeWin=()=>{
+    res.close();
+}
+
+
+
+
+
+
+
+        // ***********************************************************************************
+
+        // https:- protocol
+        //www.google.com- domain
+        // /search-path
+        // ?q=best+front+end+library-users query
+        // &oq=best+front+end+libra
+        
+        // &-variables
+        // &gs_lcrp=EgZjaHJvbWUqBwgAEAAYgAQyBwgAEAAYgAQyBggBEEUYOTIICAIQABgWGB4yCAgDEAAYFhgeMggIBBAAGBYYHjIICAUQABgWGB4yDQgGEAAYhgMYgAQYigUyDQgHEAAYhgMYgAQYigUyDQgIEAAYhgMYgAQYigUyDQgJEAAYhgMYgAQYigXSAQkxMjg1N2owajeoAgCwAgA
+        // &sourceid=chrome
+        // &ie=UTF-8
+
+
+        // *****************************************
+
+        // https:
+        // //www.flipkart.com
+        // /samsung-galaxy-s21-fe-5g-graphite-128-gb/p/itm7be0f72fff180-path
+        // ?pid=MOBGBPFZSPRG8GSU
+        
+        // &param=312132888881
+        // &ctx=eyJjYXJkQ29udGV4dCI6eyJhdHRyaWJ1dGVzIjp7InZhbHVlQ2FsbG91dCI6eyJtdWx0aVZhbHVlZEF0dHJpYnV0ZSI6eyJrZXkiOiJ2YWx1ZUNhbGxvdXQiLCJpbmZlcmVuY2VUeXBlIjoiVkFMVUVfQ0FMTE9VVCIsInZhbHVlcyI6WyJpbmNsIG9mIG9mZmVycyJdLCJ2YWx1ZVR5cGUiOiJNVUxUSV9WQUxVRUQifX0sInRpdGxlIjp7Im11bHRpVmFsdWVkQXR0cmlidXRlIjp7ImtleSI6InRpdGxlIiwiaW5mZXJlbmNlVHlwZSI6IlRJVExFIiwidmFsdWVzIjpbIlNhbXN1bmcgUzIxIEZFIDIwMjMgNUciXSwidmFsdWVUeXBlIjoiTVVMVElfVkFMVUVEIn19LCJoZXJvUGlkIjp7InNpbmdsZVZhbHVlQXR0cmlidXRlIjp7ImtleSI6Imhlcm9QaWQiLCJpbmZlcmVuY2VUeXBlIjoiUElEIiwidmFsdWUiOiJNT0JHQlBGWlNQUkc4R1NVIiwidmFsdWVUeXBlIjoiU0lOR0xFX1ZBTFVFRCJ9fX19fQ%3D%3D
+
+
+    </script>
+</body>
+
+</html>
