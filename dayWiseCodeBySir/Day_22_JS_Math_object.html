@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Math Object
+    
+        Used to perform mathimatical Operations
+        
+    -->
+
+    <script>
+        let math = Math;
+        console.log(math);
+
+
+        // min and max
+        console.log(Math.min(100, 300, 150, 500));//100
+        console.log(Math.max(100, 300, 150, 500));//100
+
+
+        const arr = [10, 20, 30, 40, 60, 100, 200, 450];
+        // spread operator
+        //...
+        console.log(arr);
+
+        console.log(...arr);
+        console.log(Math.min(...arr));//10
+
+
+
+        // ***********************************************************************
+
+        // round()- return a rounded value
+
+        // >.5 largest integer
+        // <.5 - nearest smallest integer
+
+        console.log(Math.round(33.56));//34
+        console.log(Math.round(33.33));//33
+        console.log(Math.round(-33.69));//-34
+
+
+        console.log(Math.PI);
+        console.log(Math.LN10);
+
+
+
+        //floor-  return nearest smallest integer value
+        console.log(Math.floor(58.59));//58
+        console.log(Math.floor(23.23));//23
+
+
+        //ceil- return largest nearest integer
+        console.log(Math.ceil(90.34));//91
+
+
+        // ******************************************************************************8
+
+        // returns the nearest single precision float representation of a number.
+        console.log(Math.fround(33.23))
+
+        // ****************************************************8
+
+        // trunc-remove decimal
+        //like floor work
+        console.log(Math.trunc(51.121234567));//51
+
+
+        // *************************************************************
+
+        // cbrt
+        //sqrt
+        //pow
+
+
+        var a = 25;
+        console.log(Math.sqrt(a));//5
+        console.log(Math.sqrt(625));//25
+
+
+        // cbrt
+
+        console.log(Math.cbrt(27));//3
+        console.log(Math.cbrt(125));//5
+
+
+
+        //pow-return power  of that value
+
+
+        //same like exponentiation opeartor- **
+        console.log(Math.pow(5, 2));//
+        console.log(Math.pow(10, 2));//
+
+        console.log(10 ** 2);
+
+
+        // *******************************************************************
+
+        // random- Returns a pseudorandom number between 0 and 1.
+
+
+        console.log(Math.random());//
+
+        //2 digit
+        console.log(Math.floor(Math.random()*100));
+
+
+
+        // 4 digit-otp genearte
+
+        alert(Math.round(Math.random()*10000));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

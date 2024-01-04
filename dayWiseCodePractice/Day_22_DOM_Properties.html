@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            height: 400px;
+            width: 400px;
+            background-color: crimson;
+            margin: 100px auto;
+        }
+
+        .newClass {
+            height: 400px;
+            width: 400px;
+            background-image: linear-gradient(orange, white, Green);
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="data"><b>Lorem ipsum dolor amet elit.</b></p>
+    <br>
+    <hr>
+    <div>
+        <div class="container Box-1" id="divBox"></div>
+        <button onclick="removeClass()">Remove Class</button>
+        <button onclick="addClass()">Add Class</button>
+        <button onclick="toggleClass()">Remove/Add Class</button>
+    </div>
+    <br>
+    <hr>
+
+    <input type="text" name="userName" id="Name" class="userData">
+    <br>
+    <hr>
+    <script>
+        //DOM properties
+
+        // **************************************************************
+
+        //innerHTML - returns the text content including inside element and space also
+        let a = data.innerHTML;
+        console.log(a);
+        console.log('*********')
+
+        // **************************************************************
+
+        //innerText - returns only text content excluding inside element and spacing
+        let b = data.innerText;
+        console.log(b);
+        console.log('*********')
+
+        // **************************************************************
+
+        //textContent - return text content including spacing and excluding inside element
+        let c = data.textContent;
+        console.log(c);
+        console.log('*********')
+
+        // **************************************************************
+
+        //outerText - same as innerText
+        let d = data.outerText;
+        console.log(d);
+        console.log('*********')
+
+        // **************************************************************
+
+        //outerHTML - return whole html element including tag,content,space also
+        let e = data.outerHTML;
+        console.log(e);
+
+        // **************************************************************
+
+        //classList() - return the class list in an array format i.e DOM Token List
+        let example = document.getElementById('divBox').classList;
+        console.log(example);
+
+        // **************************************************************
+
+        //There are 3 methods of classList() i.e add(),remove(),toggle()
+
+        //remove() - remove the class from classList
+        const removeClass = () => {
+            let example1 = document.getElementById('divBox').classList.remove('container')
+        }
+
+        // **************************************************************
+
+        //add() - add the class to classList
+        const addClass = () => {
+            let example2 = document.getElementById('divBox').classList.add('newClass')
+        }
+
+        // **************************************************************
+
+        //toggle() - toggle the class i.e remove class or add class
+        const toggleClass = () => {
+            let example3 = document.getElementById('divBox').classList.toggle('container')
+        }
+
+        // **************************************************************
+
+        //className() - return the class name in a string format 
+        console.log(document.getElementById('divBox').className);
+
+        // **************************************************************
+
+        //getAttribute()
+        let attr=document.getElementById('Name');
+        console.log(attr.getAttribute('Name'))        
+        
+        // **************************************************************
+
+        //setAttribute()
+        let setAtt=document.getElementById('Name')
+        setAtt.setAttribute('class','setNewClass')
+
+        // **************************************************************
+
+        //createElement() - Creates an instance of the element for the specified tag
+        let addElement =document.createElement('h3');
+        addElement.innerHTML = 'Hello Welcome createElement property';
+
+        //appendChild() - method appends a node (element) as the last child of an element
+        document.body.appendChild(addElement);
+
+        
+
+
+    </script>
+</body>
+
+</html>

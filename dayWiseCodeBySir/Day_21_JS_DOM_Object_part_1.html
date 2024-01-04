@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- DOM object -->
+
+    <!-- DOM_ Document Object Model
+
+        Hirarchy of a html content  /document i.e  Tree based structure
+
+        when web page is loaded browser creates a dom object
+
+
+        Purpose is to access html elements and performing different multiple operations
+
+
+        i.e  The HTML DOM is a standard for how to get, change, add, or delete HTML elements.
+
+
+        **********************************************************************************************
+
+        With the object model, JavaScript gets all the power it needs to create dynamic HTML:
+
+JavaScript can change all the HTML elements in the page
+JavaScript can change all the HTML attributes in the page
+JavaScript can change all the CSS styles in the page
+JavaScript can remove existing HTML elements and attributes
+JavaScript can add new HTML elements and attributes
+JavaScript can react to all existing HTML events in the page
+JavaScript can create new HTML events in the page
+
+        **********************************************************************************************
+    
+
+    -->
+
+    <!-- DOM methods
+    
+    
+        document.getElementById()- id
+
+        document.getElementsByClassName()
+        document.getElementByTagName()
+        document.getElementByName()
+
+
+        querySelector()
+        querySelectorAll()
+    -->
+
+
+    <!-- BY ID -->
+    <p id="para1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et, repellat. Tenetur neque optio facilis
+        quis quibusdam. Provident numquam doloribus a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+        explicabo delectus commodi deserunt voluptas perferendis aperiam dolor doloremque odio est obcaecati eius
+        tempore, dolorem ratione adipisci tenetur repellat reiciendis esse.</p>
+
+    <button onclick="demo1()">CLick Here 1</button>
+
+    <hr>
+    <br>
+
+
+    <!-- By Class Name -->
+    <h2 class="abc">hello 1</h2>
+    <h2 class="abc">hello 2</h2>
+    <h2 class="abc">hello 3</h2>
+    <h2 class="abc">hello 4</h2>
+    <h2 class="abc">hello 5</h2>
+
+    <hr><br>
+
+    <!-- By tag Name -->
+    <p>hello dear welcome to the Modern JS 1</p>
+    <p>hello dear welcome to the Modern JS 2</p>
+    <p>hello dear welcome to the Modern JS 3</p>
+
+
+    <hr>
+    <br>
+
+    <!-- By Name -->
+    <input type="text" name="username" id="" value="John">
+    <br>
+    <hr>
+
+
+    <!-- Universal Selector
+     -->
+    <h1 class="XYZ" id="PQR" name="AB">Hello DOM Methods</h1>
+    <h1 class="XYZ" id="PQR2" name="AB">Hello DOM Methods</h1>
+
+
+    <script>
+
+
+        var doc = document;
+        console.log(doc);
+
+        console.log(document.body);
+        console.log(document.head)
+
+
+        //    *******************************************************
+        // document.getElementById()- id
+
+        const demo1 = () => {
+            //get data
+            var res = document.getElementById('para1');
+            res.style.color = "orange";
+
+
+            //set data
+            res.innerHTML = "Welcome To The DOM"
+        }
+
+
+        // *******************************************************************
+        // document.getElementsByClassName()
+
+        //Accessing number indexing 
+        //retrun html collection
+
+
+        //get data
+        var res2 = document.getElementsByClassName('abc');
+        console.log(res2);//
+
+        //I want only value
+        var res3 = document.getElementsByClassName('abc').innerHTML;
+        console.log(res3);//undefined
+
+
+        var res4 = document.getElementsByClassName('abc')[0].innerHTML;
+        console.log(res4);//hello 1
+
+        //set data
+
+        document.getElementsByClassName('abc')[2].innerHTML = "ReactJS";
+
+        // ********************************************************
+
+        var data = document.getElementsByClassName('abc');
+        // Looping
+        for (let i = 0; i < data.length; i++) {
+            console.log(data[i].innerHTML);
+        }
+
+
+
+        // ***********************************************************************************************
+
+
+        // By Tag Name
+
+
+        console.log("*********")
+        var res6 = document.getElementsByTagName('p');
+        console.log(res6);
+
+
+        //i want para 1
+
+        var res7 = document.getElementsByTagName('p')[1].innerHTML;
+        console.log(res7);//0
+
+
+        document.getElementsByTagName('p')[1].innerHTML = "HTML";
+
+
+
+        // *****************************************************************
+
+        // document.getElementsByName()
+        ///access through indexing
+
+        console.log("*******")
+
+
+        //get data
+
+        // var res10 = document.getElementsByName('username')[0];
+        var res10 = document.getElementsByName('username')[0].value;
+        console.log(res10)
+
+        //set data
+        document.getElementsByName('username')[0].value = "Pratik";
+
+
+        // ****************************************************************************
+
+        // Universal DOM methods
+
+        // Advanced Methods and tricks
+
+
+        //querySelector-fetch the first matching html elements of specified selectors
+        // syntax
+
+        // document.querySelector('#id')
+        // document.querySelector('.classname')
+        // document.querySelector('tagname')
+
+
+
+
+        alert(document.querySelector('#PQR').innerHTML);
+
+        //return only first matching element data
+        console.log(document.querySelector('.XYZ').innerHTML);
+
+
+        console.log(document.querySelector('input').value);
+
+
+
+        // **************************************************************
+
+        // querySelectorAll()-Returns all element descendants of node that match selectors.
+
+        // document.querySelectorAll()
+
+        console.log("******")
+        console.log(document.querySelectorAll('.XYZ')[0].innerHTML);
+
+
+        //for id
+        console.log(document.querySelectorAll('#PQR')[0].innerHTML);
+
+
+
+
+        // **************************************************************************************
+
+        // Assignment on DOM Methods
+
+        // shopping cart
+        // Take 5 Input tags  - Set value=400 300 1000 2000
+
+        // set class name=total
+
+
+
+        //when we click on btn
+        // Show the Final Total Of Given values
+    </script>
+</body>
+
+</html>

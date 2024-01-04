@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ABC {
+            height: 400px;
+            width: 400px;
+            background-color: greenyellow;
+            margin: 100px auto;
+        }
+
+
+        .newclass {
+            height: 400px;
+            width: 400px;
+            background-image: linear-gradient(orange, white, green);
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- DOM Properties
+    
+    
+        innerHTML-return text content including inside element and space also
+        innerText-return only text content excluding inside element and spacing
+
+        textContent-return text content including spacing and excluding inside element
+
+        outerText-like innerText
+
+        outerHTML-return whole html element including tag ,content ,space also
+    -->
+
+    <p id="data"><b>Lorem ipsum, dolor sit amet co Quis ex eum quidem hic cum sequi modi inventore
+            voluptate. Repudiandae, debitis.</b></p>
+
+
+
+    <hr>
+    <div class="ABC XYZ PQR" id="divbox"> </div>
+
+
+    <button onclick="removeclass()">Click Here To Remove Class</button>
+    <button onclick="addclass()">CLick here To Add New Class</button>
+
+    <button id="togglebtn">Toggle Class</button>
+
+
+    <hr>
+
+    <br>
+
+    <input type="text" name="username" id="name" class="userdata">
+
+    <hr>
+    <script>
+
+        // var a = window.document.getElementById('data').innerHTML;
+        // var a = document.getElementById('data').innerHTML;
+        var a = data.innerHTML;
+        console.log(a);
+
+
+        // **********************************************************
+
+        var b = data.innerText;
+        console.log(b);
+
+
+        // *****************************************************
+
+        var c = document.getElementById('data').textContent;
+        console.log(c);
+
+        // ***********************************
+
+        // work similar like innerText
+        var d = data.outerText;
+        console.log(d);
+
+        // *************************************************************
+
+
+        var e = data.outerHTML;
+        console.log(e);
+
+
+
+        // ***********************************************************************************
+
+        // classList()- return the class list in an Array format i.e DOM Token List
+
+        var res = document.getElementById('divbox').classList;
+        console.log(res);
+
+        // 3 methods- add remove toggle
+
+        //1 remove
+
+        const removeclass = () => {
+            // alert('')
+
+            var res = document.getElementById('divbox').classList.remove('ABC');
+            console.log(res);
+        }
+
+
+
+        // add class
+
+        const addclass = () => {
+
+            document.getElementById('divbox').classList.add('newclass');
+        }
+
+
+        // *******************************************************************************
+
+        // toggle class
+        document.getElementById('togglebtn').addEventListener('click', () => {
+            document.getElementById('divbox').classList.toggle('ABC');
+        })
+
+
+        // ***************************************************************************
+
+        // classname-return a class name in a string format
+
+        console.log(document.getElementById('divbox').className);
+
+
+        //    **************************************************************************
+
+
+        // getAttribute()
+        // setAttribute()
+
+
+
+        var attr = document.getElementById('name');
+
+        console.log(attr.getAttribute('class'));
+        console.log(attr.getAttribute('name'));
+
+
+
+        //set Attribute
+
+        var setattr = document.getElementById('name')
+        setattr.setAttribute('class', 'setnewclass');
+
+
+
+        // **********************************************************
+
+        // appendChild
+        // replaceChild
+
+
+        //createElement
+        // 
+
+        // Creates an instance of the element for the specified tag
+        var data2 = document.createElement('h2');
+        data2.innerText = "Hello Welcome To The JS DOM";
+
+
+        document.body.appendChild(data2);
+
+        //createTextNode
+        //appendchild
+
+
+
+        // ******************************************************************************
+
+        // Assignment On DOM
+
+        //1
+
+        // Take a Div box- styling
+
+        // take  a button-  Toggle - hide/show
+
+
+        // *****************************************************
+
+        //2 - Password hide show
+
+        // take Input Field  for user Email
+        // take Input Field  for user Password
+
+
+        // take a Button - Show PassWord -  display/hide
+
+
+
+
+
+
+
+        // ******************************************************************************
+
+    </script>
+</body>
+
+</html>

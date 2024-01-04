@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <!-- Date  -->
+
+<input type="date" name="" id="">
+    <script>
+
+        var date = new Date();
+        console.log(date);
+
+        //separate date
+
+        console.log(date.getFullYear());
+        console.log(date.getMonth());//starts indexing 0 -0-Jan  1-feb  11-dec
+        console.log(date.getMonth() + 1);//starts indexing 0 -0-Jan  1-feb  11-dec
+
+
+
+        console.log(date.getDate());//21
+        console.log(date.getDay());//4   0-Sunday 1- mon- 4-Thursday
+
+        console.log(date.getHours())//11
+
+
+        console.log("***********")
+
+        // *****************************************************
+        // var newDate=new Date('2025,Aug 20 10:10:10');
+        // console.log(newDate)
+
+
+        var newDate = new Date();
+
+        newDate.setFullYear(2030);
+        newDate.setHours(10);
+        newDate.setMonth(1);
+        console.log(newDate);
+
+
+
+        // ******************************************************************************
+
+
+        // 3 date Methods
+
+        // toLocaleDateString();-return only todays date
+
+        // toLocaleTimeString()-return only todays time
+
+
+        // toLocaleString()-return both date and time
+
+        
+
+        alert(new Date());
+
+
+        var res=new Date()
+        alert(res.toLocaleDateString());//
+
+        alert(new Date().toLocaleTimeString());//return only time
+
+        alert(res.toLocaleString());//return both date and time
+
+
+
+    </script>
+
+</body>
+
+</html>

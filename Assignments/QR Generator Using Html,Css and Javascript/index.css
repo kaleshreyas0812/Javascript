@@ -1,0 +1,14 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    margin: 300px auto;
+    height: auto;
+    width: 100px;
+    border: 2px solid white;
+    padding: 10px;
+    
+}
